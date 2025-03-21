@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Standar BMR</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Judul -->
+    <header>
+        <h1>e-Standar BMR</h1>
+    </header>
+
+    <!-- Tautan Unduh -->
+    <div class="download-links">
+        <a href="panduan.pdf">📥 Panduan Pengguna</a>
+        <a href="bibliografi.pdf">📥 Bibliografi</a>
+    </div>
+
+    <!-- Container Pencarian -->
+    <div class="search-container">
+        <!-- Pencarian Bahan Aktif (Kiri) -->
+        <div class="search-box">
+            <div class="header">
+                <input type="text" id="searchBahan" placeholder="Cari bahan aktif..." autocomplete="off">
+                <button onclick="searchByBahan()">Cari</button>
+            </div>
+            <div class="suggestions" id="suggestionsBahan"></div>
+            <div class="result-table" id="resultBahan"></div>
+        </div>
+
+        <!-- Pencarian Jenis Pangan (Kanan) -->
+        <div class="search-box">
+            <div class="header">
+                <input type="text" id="searchPangan" placeholder="Cari jenis pangan..." autocomplete="off">
+                <button onclick="searchByPangan()">Cari</button>
+            </div>
+            <div class="suggestions" id="suggestionsPangan"></div>
+            <div class="result-table" id="resultPangan"></div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
